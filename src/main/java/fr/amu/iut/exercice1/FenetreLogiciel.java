@@ -31,6 +31,25 @@ public class FenetreLogiciel extends Application {
         Edit.getItems().addAll(Cut, Copy, Paste);
         MenuBar.getMenus().addAll(File, Edit, Help);
         root.setTop(MenuBar);
+
+        VBox vBox = new VBox();
+        Label Boutons = new Label("Boutons :");
+        Button Bouton1 = new Button("Bouton 1");
+        Button Bouton2 = new Button("Bouton 2");
+        Button Bouton3 = new Button("Bouton 3");
+        vBox.getChildren().addAll(Boutons,Bouton1,Bouton2,Bouton3);
+        vBox.setAlignment(Pos.CENTER);
+        root.setCenter(vBox);
+
+        Scene scene = new Scene(root, 500, 500);
+        //Ici, on définit la scène principale de l'appli
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("Premier exemple manipulant les conteneurs");
+        primaryStage.show();
+    }
+
+    public static void main(String[] args) {
+        launch(args);
     }
 }
 
