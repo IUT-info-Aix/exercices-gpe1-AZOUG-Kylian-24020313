@@ -7,18 +7,16 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 public class CounterMain extends Application {
-    public static void main(String[] args) {
-        launch(args);
-    }
 
     @Override
-    public void start(Stage stage) {
-        try {
+    public void start(Stage stage) throws Exception {
             BorderPane root = FXMLLoader.load(getClass().getClassLoader().getResource("exercice7/CounterView.fxml"));
-            stage.setScene(new Scene(root));
+            stage.setTitle("Compteur simple");
+            stage.setScene(new Scene(root, 300, 200));
             stage.show();
-        } catch (Exception e) {
-            e.printStackTrace();
+        }
+
+        public static void main(String[] args) {
+            launch(args);
         }
     }
-}
