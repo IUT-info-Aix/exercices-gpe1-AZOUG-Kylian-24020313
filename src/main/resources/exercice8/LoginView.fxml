@@ -5,21 +5,31 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<GridPane alignment="CENTER" hgap="100" styleClass="root"  vgap="20" fx:controller="fr.amu.iut.exercice8.LoginControl"
-                             xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+<GridPane alignment="CENTER" hgap="10" styleClass="exercice8/Login.css"  vgap="10" fx:controller="fr.amu.iut.exercice8.LoginControl"
+                             xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" >
     <Text id="welcome-text" text="Welcome" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0" />
 
     <Label text="User Id:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
 
 <!--   à compléter par un TextField et un Label -->
+   <TextField fx:id="userId"
+              GridPane.rowIndex="1" GridPane.columnIndex="1"/>
 
-    <PasswordField fx:id="pwd" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+   <Label text="Password:"
+          GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+   <PasswordField fx:id="pwd" GridPane.columnIndex="1" GridPane.rowIndex="2" />
 
 <!--  à compléter pour les boutons -->
+   <Button text="Ok"
+           onAction="#okClicked"
+           GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+   <Button text="Cancel"
+           onAction="#cancelClicked"
+           GridPane.rowIndex="3" GridPane.columnIndex="1"/>
 
    <columnConstraints>
-      <ColumnConstraints maxWidth="103.0" minWidth="63.0" prefWidth="83.0" />
-      <ColumnConstraints maxWidth="143.0" minWidth="103.0" prefWidth="123.0" />
+      <ColumnConstraints maxWidth="100" minWidth="80" prefWidth="100" />
+      <ColumnConstraints maxWidth="140" minWidth="120" prefWidth="150" />
    </columnConstraints>
    <rowConstraints>
       <RowConstraints />
@@ -31,6 +41,6 @@
       <Insets />
    </opaqueInsets>
    <padding>
-      <Insets bottom="10.0" left="10.0" right="10.0" />
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10" />
    </padding>
 </GridPane>
