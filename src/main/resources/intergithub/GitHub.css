@@ -1,0 +1,40 @@
+/* En-tête */
+.header {
+    -fx-background-color: #24292e;
+    -fx-padding: 0 20 0 20;
+}
+.header .hyperlink {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-underline: false;
+}
+.header .text-field {
+    -fx-background-radius: 4;
+    -fx-background-color: white;
+    -fx-font-size: 14px;
+}
+.header .button.sign-in {
+    -fx-text-fill: white;
+    -fx-background-color: transparent;
+    -fx-border-color: white;
+    -fx-border-radius: 4;
+}
+.header .button.sign-up {
+    -fx-text-fill: white;
+    -fx-background-color: #2ea44f;
+    -fx-border-radius: 4;
+}
+
+/* Section hero */
+.hero {
+    -fx-background-color: #f6f8fa;
+    -fx-padding: 100 20 100 20;
+}
+.hero-title {
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+}
+.hero-subtitle {
+    -fx-font-size: 16px;
+    -fx-fill: #57606a;
+}

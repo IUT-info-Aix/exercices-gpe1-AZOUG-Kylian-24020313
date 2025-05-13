@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="fr.amu.iut.intergithub.GitHubController">
+
+    <!-- Header -->
+    <top>
+        <HBox styleClass="header" spacing="20" alignment="CENTER_LEFT">
+            <children>
+                <ImageView fitHeight="32" preserveRatio="true">
+                    <image>
+                        <!-- Logo officiel GitHub -->
+                        <Image url="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"/>
+                    </image>
+                </ImageView>
+                <HBox spacing="10">
+                    <Hyperlink text="Pull requests"/>
+                    <Hyperlink text="Issues"/>
+                    <Hyperlink text="Marketplace"/>
+                    <Hyperlink text="Explore"/>
+                </HBox>
+                <Region HBox.hgrow="ALWAYS"/>
+                <TextField promptText="Search GitHub" minWidth="200"/>
+                <Button text="Sign in" styleClass="sign-in"/>
+                <Button text="Sign up" styleClass="sign-up"/>
+            </children>
+        </HBox>
+    </top>
+
+    <!-- Hero Section -->
+    <center>
+        <VBox alignment="CENTER" spacing="10" styleClass="hero">
+            <children>
+                <Text text="Built for developers" styleClass="hero-title"/>
+                <Text text="GitHub is where over 100 million developers shape the future of software, together."
+                      styleClass="hero-subtitle" wrappingWidth="600"/>
+            </children>
+        </VBox>
+    </center>
+
+</BorderPane>
