@@ -27,13 +27,11 @@ public class Palette extends Application {
     private int nbRouge = 0;
     private int nbBleu  = 0;
 
-    // 1) Propriétés observables
     private final IntegerProperty nbFois         = new SimpleIntegerProperty(0);
     private final StringProperty  couleurNom     = new SimpleStringProperty("");
     private final StringProperty  message        = new SimpleStringProperty("");
     private final StringProperty  couleurPanneau = new SimpleStringProperty("#FFFFFF");
 
-    // Noeuds UI dont on a besoin dans createBindings()
     private Label texteDuHaut;
     private Pane  panneau;
     private Label texteDuBas;
@@ -56,7 +54,7 @@ public class Palette extends Application {
         Button rouge = new Button("Rouge");
         Button bleu  = new Button("Bleu");
 
-        // 2) Handlers : ils ne touchent QUE les propriétés et compteurs
+        // Handlers
         vert.setOnAction(e -> {
             nbVert++;
             nbFois.set(nbVert);
@@ -96,7 +94,7 @@ public class Palette extends Application {
         root.setCenter(panneau);
         root.setBottom(bas);
 
-        // 3) Création des bindings
+        // bindings
         createBindings();
 
         // --- Affichage ---
